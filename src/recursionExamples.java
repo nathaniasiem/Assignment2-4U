@@ -25,6 +25,17 @@ public class recursionExamples {
         return numbers[n];
 
     }
+    //Calculate the nth Fib number using recursion
+    // n - the nth number in the sequence
+    public int fibR (int n){
+        //BASE CASE
+        if (n==0||n==1){
+            return 1;
+        }else{
+            return fibR(n-1)+fibR(n-2);
+        }
+        
+    }
 
     /**
      * @param args the command line arguments

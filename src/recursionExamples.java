@@ -27,14 +27,15 @@ public class recursionExamples {
     }
     //Calculate the nth Fib number using recursion
     // n - the nth number in the sequence
-    public int fibR (int n){
+
+    public int fibR(int n) {
         //BASE CASE
-        if (n==0||n==1){
+        if (n == 0 || n == 1) {
             return 1;
-        }else{
-            return fibR(n-1)+fibR(n-2);
+        } else {
+            return fibR(n - 1) + fibR(n - 2);
         }
-        
+
     }
 
     /**
@@ -47,7 +48,16 @@ public class recursionExamples {
         System.out.println("0th: " + bound1);
         int bound2 = test.fibLoop(1);
         System.out.println("1st: " + bound2);
-        int norm = test.fibLoop(5);
-        System.out.println("5th: " + norm);
+        int norm = test.fibLoop(26);
+        System.out.println("26th: " + norm);
+        System.out.println("--------------");
+        int boundR1 = test.fibR(0);
+        System.out.println("0th:" + boundR1);
+        int boundR2 = test.fibR(1);
+        System.out.println("1st:" + boundR2);
+        int normR = test.fibR(6);
+        System.out.println("6th:" + normR);
+
+
     }
 }

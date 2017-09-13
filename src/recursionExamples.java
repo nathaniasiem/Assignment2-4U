@@ -35,7 +35,25 @@ public class recursionExamples {
         } else {
             return fibR(n - 1) + fibR(n - 2);
         }
+    }
 
+    public int gcd(int a, int b) {
+
+        //swap if a is a lower number
+        if (a < b) {
+            int temp = a;
+            a = b;
+            b = temp;
+        }
+        //check if we are done
+        if (b == 0) {
+            return a;
+        } else {
+            //find new values for a and b
+            int r = a % b;
+            //calculate new gcd
+            return gcd(b, r);
+        }
     }
 
     /**
@@ -58,6 +76,11 @@ public class recursionExamples {
         int normR = test.fibR(6);
         System.out.println("6th:" + normR);
 
+
+        System.out.println("------- GCD Test");
+        System.out.println("GCD (1377,24)");
+        int gcd = test.gcd(1377, 24);
+        System.out.println(gcd);
 
     }
 }

@@ -17,10 +17,11 @@ public class A2Q1 {
             return n;
             //condition when greater than 10
         } else {
-            //take the remainder and the quotient 
+            //yields the rightmost digit
             int right = n % 10;
+            //removes the rightmost digit
             int left = n / 10;
-            //add both remainder and quotient together
+            //add both digits together
             return digitalSum(left) + digitalSum(right);
         }
     }

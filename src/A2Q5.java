@@ -8,16 +8,15 @@
  * @author simon7323
  */
 public class A2Q5 {
+    //method to output nth number as binary digits
 public void binaryConvert (int n){
-    //create base case
-    if (n==1){
-        binaryConvert(n);
-    }else if(n%2==0){
-        n=n/2;
-        System.out.print(0);
-        binaryConvert(n);
-    }else{
-        System.out.print(1);
+    //condition when number is greater than 0
+    if (n>0){
+        //take the nth number divide by 2
+        binaryConvert(n/2);
+        //output as binary digits
+        System.out.print(n%2);
+    
     }
 }
     public static void main(String[] args) {

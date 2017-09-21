@@ -19,8 +19,11 @@ public class A2Q7 {
        //set the last letter as a string
        String lstLetter = s.substring(length-1);
        
+       //condition when the first letter is the same as the last letter
        if(frstLetter.equals(lstLetter)){
+           //return the output with modified length and word
            return isPalindrome(s.substring(1,length-1),length-2);
+           //condition when not equal, outputs false
        }else{
            return false;
        }
